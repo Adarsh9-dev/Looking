@@ -7,7 +7,7 @@ dotenv.config();
 const stripe = new Stripe(process.env.SK_KEY);
 // console.log(process.env.SK_KEY);
 export const createPayment = async (req,res,next)=> {
-    const URL = "https://lookingcom.netlify.app";
+    const URL = process.env.WEB_URL;
     const product = req.body.all;
     let session;
     try {
@@ -27,8 +27,8 @@ export const createPayment = async (req,res,next)=> {
             } ],
             payment_method_types: ['card'],
             mode: 'payment',
-            success_url: "https://lookingcom.netlify.app/success",
-            cancel_url: "https://lookingcom.netlify.app/error",
+            success_url: `${URL}/success`,
+            cancel_url: `${URL}/error`,
         })
         res.status(200).json(session)
     } catch(err) {
