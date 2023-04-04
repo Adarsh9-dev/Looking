@@ -7,7 +7,7 @@ dotenv.config();
 const stripe = new Stripe(process.env.SK_KEY);
 // console.log(process.env.SK_KEY);
 export const createPayment = async (req,res,next)=> {
-    const URL = process.env.WEB_URL;
+    const URL = "https://lookingcom.netlify.app";
     const product = req.body.all;
     let session;
     try {
