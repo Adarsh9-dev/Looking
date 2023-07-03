@@ -60,13 +60,10 @@ npm start
 
 2. In the server `.env` file, add your MongoDB connection URL, Twilio account SID, auth token, and Twilio phone number:
 
-MONGODB_URI=your_mongodb_connection_url
-
-TWILIO_ACCOUNT_SID=your_twilio_account_sid
-
-TWILIO_AUTH_TOKEN=your_twilio_auth_token
-
-TWILIO_PHONE_NUMBER=your_twilio_phone_number
+- MONGODB_URI=your_mongodb_connection_url
+- TWILIO_ACCOUNT_SID=your_twilio_account_sid
+- TWILIO_AUTH_TOKEN=your_twilio_auth_token
+- TWILIO_PHONE_NUMBER=your_twilio_phone_number
 
 3. In the client `.env` file, add your Stripe publishable key:
 
@@ -89,7 +86,3 @@ REACT_APP_STRIPE_PUBLISHABLE_KEY=your_stripe_publishable_key
 ## Contributing
 
 Contributions are welcome! If you have any suggestions or improvements, please open an issue or submit a pull request.
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
